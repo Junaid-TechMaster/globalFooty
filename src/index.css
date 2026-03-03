@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* 1. This line tells Tailwind v4 to use the "class" toggle for dark mode */
+@variant dark (&:where(.dark, .dark *));
+
+html, body {
+  margin: 0;
+  padding: 0;
+  
+  /* 2. REMOVED the hardcoded black background */
+  /* 3. Added Tailwind @apply so the body smoothly transitions between white and black */
+  @apply bg-white dark:bg-black text-black dark:text-white transition-colors duration-500;
+  
+  /* Allow the page to grow naturally */
+  height: auto; 
+  min-height: 100%;
+}
+
+/* Ensure no section is accidentally hiding the scrollbar */
+* {
+  box-sizing: border-box;
+}

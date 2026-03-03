@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'; 
-import footballImg from '../assets/football.png'; 
+import footballImg from '../assets/Football.png'; 
 
 const Hero = () => {
   const { scrollY } = useScroll();
